@@ -1,0 +1,117 @@
+
+> mcp-mmm-server@1.0.0 eval
+> tsx --env-file-if-exists=.env scripts/llm-eval.ts --trials 3 --out results.json
+
+
+L0
+  PASS submit-urgent      #1 calls=3 err=0 rej=0 lc=0 cacheRd=1977 cacheWr=890 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #2 calls=3 err=0 rej=0 lc=0 cacheRd=2738 cacheWr=99 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #3 calls=3 err=0 rej=0 lc=0 cacheRd=2738 cacheWr=120 :: WO-1001 is submitted (want submitted)
+  PASS approve-and-start  #1 calls=4 err=0 rej=0 lc=0 cacheRd=3168 cacheWr=1110 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #2 calls=4 err=0 rej=0 lc=0 cacheRd=3843 cacheWr=435 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #3 calls=4 err=0 rej=0 lc=0 cacheRd=3843 cacheWr=435 :: WO-1002 is in_progress (want in_progress)
+  PASS close-out          #1 calls=8 err=0 rej=0 lc=0 cacheRd=8509 cacheWr=2002 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #2 calls=8 err=0 rej=0 lc=0 cacheRd=9421 cacheWr=1374 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #3 calls=8 err=0 rej=0 lc=0 cacheRd=9229 cacheWr=1324 :: WO-1004 completed, notes=1, labor=1.5
+  PASS cannot-cancel      #1 calls=2 err=0 rej=0 lc=0 cacheRd=1206 cacheWr=908 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #2 calls=2 err=0 rej=0 lc=0 cacheRd=1871 cacheWr=243 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #3 calls=2 err=0 rej=0 lc=0 cacheRd=1871 cacheWr=243 :: WO-1005 is completed (want completed)
+  PASS create-and-submit  #1 calls=3 err=0 rej=0 lc=0 cacheRd=2015 cacheWr=862 :: WO-1006 submitted high
+  PASS create-and-submit  #2 calls=3 err=0 rej=0 lc=0 cacheRd=2877 cacheWr=0 :: WO-1006 submitted high
+  PASS create-and-submit  #3 calls=3 err=0 rej=0 lc=0 cacheRd=2877 cacheWr=0 :: WO-1006 submitted high
+  PASS role-blocked       #1 calls=3 err=0 rej=0 lc=0 cacheRd=2132 cacheWr=1077 :: WO-1002 is submitted
+  PASS role-blocked       #2 calls=3 err=0 rej=0 lc=0 cacheRd=2789 cacheWr=367 :: WO-1002 is submitted
+  PASS role-blocked       #3 calls=3 err=0 rej=0 lc=0 cacheRd=2787 cacheWr=365 :: WO-1002 is submitted
+
+L1
+  PASS submit-urgent      #1 calls=2 err=0 rej=0 lc=0 cacheRd=2247 cacheWr=1631 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #2 calls=2 err=0 rej=0 lc=0 cacheRd=3230 cacheWr=648 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #3 calls=2 err=0 rej=0 lc=0 cacheRd=3230 cacheWr=648 :: WO-1001 is submitted (want submitted)
+  PASS approve-and-start  #1 calls=3 err=0 rej=0 lc=0 cacheRd=3870 cacheWr=2049 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #2 calls=3 err=0 rej=0 lc=0 cacheRd=4858 cacheWr=1061 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #3 calls=3 err=0 rej=0 lc=0 cacheRd=4858 cacheWr=1061 :: WO-1002 is in_progress (want in_progress)
+  PASS close-out          #1 calls=3 err=0 rej=0 lc=0 cacheRd=4130 cacheWr=2502 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #2 calls=3 err=0 rej=0 lc=0 cacheRd=5142 cacheWr=1490 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #3 calls=3 err=0 rej=0 lc=0 cacheRd=5151 cacheWr=1505 :: WO-1004 completed, notes=1, labor=1.5
+  PASS cannot-cancel      #1 calls=1 err=0 rej=0 lc=0 cacheRd=978 cacheWr=1244 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #2 calls=1 err=0 rej=0 lc=0 cacheRd=1956 cacheWr=266 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #3 calls=1 err=0 rej=0 lc=0 cacheRd=1956 cacheWr=266 :: WO-1005 is completed (want completed)
+  PASS create-and-submit  #1 calls=2 err=0 rej=0 lc=0 cacheRd=2281 cacheWr=1615 :: WO-1006 submitted high
+  PASS create-and-submit  #2 calls=2 err=0 rej=0 lc=0 cacheRd=3276 cacheWr=620 :: WO-1006 submitted high
+  PASS create-and-submit  #3 calls=2 err=0 rej=0 lc=0 cacheRd=3276 cacheWr=620 :: WO-1006 submitted high
+  PASS role-blocked       #1 calls=3 err=0 rej=0 lc=0 cacheRd=2579 cacheWr=1830 :: WO-1002 is submitted
+  PASS role-blocked       #2 calls=3 err=0 rej=0 lc=0 cacheRd=3548 cacheWr=861 :: WO-1002 is submitted
+  PASS role-blocked       #3 calls=3 err=0 rej=0 lc=0 cacheRd=3553 cacheWr=898 :: WO-1002 is submitted
+
+L2
+  PASS submit-urgent      #1 calls=2 err=0 rej=0 lc=0 cacheRd=4982 cacheWr=2932 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #2 calls=2 err=0 rej=0 lc=0 cacheRd=7338 cacheWr=576 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #3 calls=2 err=0 rej=0 lc=0 cacheRd=7338 cacheWr=576 :: WO-1001 is submitted (want submitted)
+  PASS approve-and-start  #1 calls=3 err=0 rej=0 lc=0 cacheRd=8014 cacheWr=3451 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #2 calls=3 err=0 rej=0 lc=0 cacheRd=10375 cacheWr=1090 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #3 calls=3 err=0 rej=0 lc=0 cacheRd=10264 cacheWr=917 :: WO-1002 is in_progress (want in_progress)
+  PASS close-out          #1 calls=3 err=0 rej=0 lc=0 cacheRd=8239 cacheWr=3784 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #2 calls=3 err=0 rej=0 lc=0 cacheRd=10646 cacheWr=1425 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #3 calls=3 err=0 rej=0 lc=0 cacheRd=10676 cacheWr=1457 :: WO-1004 completed, notes=1, labor=1.5
+  PASS cannot-cancel      #1 calls=1 err=0 rej=0 lc=0 cacheRd=2351 cacheWr=2588 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #2 calls=1 err=0 rej=0 lc=0 cacheRd=4702 cacheWr=237 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #3 calls=1 err=0 rej=0 lc=0 cacheRd=4702 cacheWr=247 :: WO-1005 is completed (want completed)
+  PASS create-and-submit  #1 calls=2 err=0 rej=0 lc=0 cacheRd=5001 cacheWr=2904 :: WO-1006 submitted high
+  PASS create-and-submit  #2 calls=2 err=0 rej=0 lc=0 cacheRd=7369 cacheWr=536 :: WO-1006 submitted high
+  PASS create-and-submit  #3 calls=2 err=0 rej=0 lc=0 cacheRd=7369 cacheWr=536 :: WO-1006 submitted high
+  PASS role-blocked       #1 calls=1 err=0 rej=0 lc=0 cacheRd=2342 cacheWr=2654 :: WO-1002 is submitted
+  PASS role-blocked       #2 calls=1 err=0 rej=0 lc=0 cacheRd=4684 cacheWr=330 :: WO-1002 is submitted
+  PASS role-blocked       #3 calls=0 err=0 rej=0 lc=0 cacheRd=2342 cacheWr=0 :: WO-1002 is submitted
+
+L3
+  PASS submit-urgent      #1 calls=3 err=0 rej=0 lc=3 cacheRd=1608 cacheWr=8881 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #2 calls=3 err=0 rej=0 lc=3 cacheRd=3216 cacheWr=7273 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #3 calls=3 err=0 rej=0 lc=3 cacheRd=3216 cacheWr=7273 :: WO-1001 is submitted (want submitted)
+  PASS approve-and-start  #1 calls=3 err=0 rej=0 lc=9 cacheRd=0 cacheWr=13475 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #2 calls=3 err=0 rej=0 lc=9 cacheRd=1613 cacheWr=11862 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #3 calls=3 err=0 rej=0 lc=9 cacheRd=1613 cacheWr=11862 :: WO-1002 is in_progress (want in_progress)
+  PASS close-out          #1 calls=3 err=0 rej=0 lc=4 cacheRd=4487 cacheWr=7684 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #2 calls=3 err=0 rej=0 lc=4 cacheRd=6124 cacheWr=6029 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #3 calls=3 err=0 rej=0 lc=4 cacheRd=6124 cacheWr=6049 :: WO-1004 completed, notes=1, labor=1.5
+  PASS cannot-cancel      #1 calls=1 err=0 rej=0 lc=0 cacheRd=1603 cacheWr=2054 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #2 calls=1 err=0 rej=0 lc=0 cacheRd=3206 cacheWr=451 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #3 calls=1 err=0 rej=0 lc=0 cacheRd=3206 cacheWr=451 :: WO-1005 is completed (want completed)
+  PASS create-and-submit  #1 calls=2 err=0 rej=0 lc=3 cacheRd=0 cacheWr=7934 :: WO-1006 submitted high
+  PASS create-and-submit  #2 calls=2 err=0 rej=0 lc=3 cacheRd=7934 cacheWr=0 :: WO-1006 submitted high
+  PASS create-and-submit  #3 calls=2 err=0 rej=0 lc=3 cacheRd=7934 cacheWr=0 :: WO-1006 submitted high
+  PASS role-blocked       #1 calls=1 err=0 rej=0 lc=1 cacheRd=0 cacheWr=4295 :: WO-1002 is submitted
+  PASS role-blocked       #2 calls=1 err=0 rej=0 lc=1 cacheRd=1594 cacheWr=2717 :: WO-1002 is submitted
+  PASS role-blocked       #3 calls=1 err=0 rej=0 lc=1 cacheRd=1594 cacheWr=2711 :: WO-1002 is submitted
+
+L4
+  PASS submit-urgent      #1 calls=3 err=0 rej=0 lc=3 cacheRd=1812 cacheWr=10767 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #2 calls=3 err=0 rej=0 lc=3 cacheRd=3624 cacheWr=8955 :: WO-1001 is submitted (want submitted)
+  PASS submit-urgent      #3 calls=3 err=0 rej=0 lc=3 cacheRd=3624 cacheWr=8955 :: WO-1001 is submitted (want submitted)
+  PASS approve-and-start  #1 calls=3 err=0 rej=0 lc=9 cacheRd=0 cacheWr=18075 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #2 calls=3 err=0 rej=0 lc=9 cacheRd=1817 cacheWr=16258 :: WO-1002 is in_progress (want in_progress)
+  PASS approve-and-start  #3 calls=3 err=0 rej=0 lc=9 cacheRd=1817 cacheWr=16258 :: WO-1002 is in_progress (want in_progress)
+  PASS close-out          #1 calls=3 err=0 rej=0 lc=4 cacheRd=5397 cacheWr=10188 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #2 calls=3 err=0 rej=0 lc=4 cacheRd=7238 cacheWr=8345 :: WO-1004 completed, notes=1, labor=1.5
+  PASS close-out          #3 calls=3 err=0 rej=0 lc=4 cacheRd=7238 cacheWr=8349 :: WO-1004 completed, notes=1, labor=1.5
+  PASS cannot-cancel      #1 calls=1 err=0 rej=0 lc=0 cacheRd=1807 cacheWr=2381 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #2 calls=1 err=0 rej=0 lc=0 cacheRd=3614 cacheWr=574 :: WO-1005 is completed (want completed)
+  PASS cannot-cancel      #3 calls=1 err=0 rej=0 lc=0 cacheRd=3614 cacheWr=574 :: WO-1005 is completed (want completed)
+  PASS create-and-submit  #1 calls=2 err=0 rej=0 lc=3 cacheRd=0 cacheWr=9650 :: WO-1006 submitted high
+  PASS create-and-submit  #2 calls=2 err=0 rej=0 lc=3 cacheRd=9650 cacheWr=0 :: WO-1006 submitted high
+  PASS create-and-submit  #3 calls=2 err=0 rej=0 lc=3 cacheRd=9650 cacheWr=0 :: WO-1006 submitted high
+  PASS role-blocked       #1 calls=1 err=0 rej=0 lc=1 cacheRd=0 cacheWr=4996 :: WO-1002 is submitted
+  PASS role-blocked       #2 calls=1 err=0 rej=0 lc=1 cacheRd=1798 cacheWr=3186 :: WO-1002 is submitted
+  PASS role-blocked       #3 calls=1 err=0 rej=0 lc=1 cacheRd=1798 cacheWr=3189 :: WO-1002 is submitted
+
+====================================================================================================
+Summary by level (model claude-opus-5-5, effort medium, 3 trial(s))
+====================================================================================================
+level tools@start  surface tok  pass         calls        dom err      rejected     list_changed cache rd     cache wr     uncached     output       cost $       
+L0    1            390          18/18        3.8          0.0          0.0          0.0          3661         659          12           378          0.0116       
+L1    3            823          18/18        2.3          0.0          0.0          0.0          3340         1156         8            433          0.0151       
+L2    13           2191         18/18        1.9          0.0          0.0          0.0          6596         1458         8            332          0.0153       
+L3    7            1362         18/18        2.2          0.0          0.0          3.3          3060         5611         8            305          0.0348       
+L4    8            1536         18/18        2.2          0.0          0.0          3.3          3583         7261         8            293          0.0429       
+Per-run averages except pass. "rejected" = calls to tools the server had hidden or does not have.
+
+Wrote results.json
