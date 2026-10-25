@@ -85,6 +85,11 @@ export class WorkOrderService {
       const value = payload[NEEDS_TO_PAYLOAD_KEY[need]!];
       if (value === undefined || value === '') return Err('invalid_input', `Missing required field "${need}".`);
     }
+    // Checked here, not only in tool schemas: L0/L1 parse free text and can hand over NaN.
+    const hours = payload.laborHours;
+    if (hours !== undefined && (!Number.isFinite(hours) || hours < 0)) {
+      return Err('invalid_input', `labor_hours must be a non-negative number (got ${String(hours)}).`);
+    }
 
     const at = new Date().toISOString();
     const from = wo.state;
