@@ -1,0 +1,26 @@
+{
+  "name": "mcp-mmm-server",
+  "version": "1.0.0",
+  "description": "Reference MCP server demonstrating progressive disclosure, list_changed, resource templates, prompt templates and next-best-action discovery across five MCP maturity levels (L0-L4).",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/src/index.js",
+    "dev": "tsx src/index.ts",
+    "demo": "tsx scripts/demo.ts",
+    "eval": "tsx --env-file-if-exists=.env scripts/llm-eval.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
