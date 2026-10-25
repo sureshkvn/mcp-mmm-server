@@ -68,7 +68,7 @@ Claude Desktop / Claude Code config:
 | L0 | RPC tunnel | One `rpc(command)` tool, text in/out, errors as prose | 1 tool |
 | L1 | Resources | Addressable things: `work_order(operation=...)` + fixed resource URIs (stale after startup) | 1 tool, 6 resources |
 | L2 | Verbs | One tool per intent, typed input *and* output schemas, honest annotations (read-only / destructive). Static list, no guidance | 11 tools |
-| L3 | Affordances | L2 + responses carry `_affordances`, `_blocked` (with why and how to unblock), `_links`; **progressive disclosure** of tools and prompts with `list_changed`; resource templates + completion; prompt templates | 5 core tools grow to ~10, 4 templates, 2-3 prompts |
+| L3 | Affordances | L2 + responses carry `_affordances`, `_blocked` (with why, and which role to ask), `_links`; **progressive disclosure** of tools and prompts with `list_changed`; resource templates + completion; prompt templates | 5 core tools grow to ~10, 4 templates, 2-3 prompts |
 | L4 | Adaptive | L3 + `next_best_actions`: ranked, explained, role-aware recommendations across all work orders; declarative `_ui` hint | +1 tool |
 
 L3 is where the Richardson analogy lands: hypermedia controls, except the consumer is a reasoning

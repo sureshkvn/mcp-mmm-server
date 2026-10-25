@@ -21,13 +21,22 @@ export interface Affordance {
   prerequisite?: ToolCallHint;
 }
 
+/**
+ * Who can still do a blocked action. Deliberately not a tool call: authority comes from sign-in,
+ * so the way forward is a person with the role, never the agent changing its own role.
+ */
+export interface EscalationHint {
+  requiresRole: Role;
+  suggestion: string;
+}
+
 /** Something that exists in this state but is not available to the current role. Explains *why*. */
 export interface BlockedAffordance {
   rel: string;
   tool: string;
   title: string;
   reason: string;
-  unblock?: ToolCallHint;
+  unblock?: EscalationHint;
 }
 
 export interface ResourceLink {
@@ -80,7 +89,10 @@ export function buildAffordances(
         tool: spec.tool,
         title: spec.title,
         reason: verdict.error.message,
-        unblock: { tool: 'switch_role', args: { role: spec.roles[0] } },
+        unblock: {
+          requiresRole: spec.roles[0]!,
+          suggestion: `Ask someone with the ${spec.roles[0]} role to do "${spec.title}" on ${wo.id}. Do not change your own role to get around this.`,
+        },
       });
     }
     // invalid_state: the action simply does not exist in this state, so it is not advertised at all.
